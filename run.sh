@@ -53,14 +53,14 @@ if [[ -n "$PACKAGE" ]]; then
     CLASS_NAME="$PACKAGE.$CLASS_NAME"
 fi
 
-echo "========================================"
-echo "Java Competitive Coding Runner"
-echo "========================================"
-echo "Source: $SOURCE"
-echo "Class:  $CLASS_NAME"
-echo "Input:  $INPUT"
-echo "Output: $OUTPUT"
-echo
+# echo "========================================"
+# echo "Java Competitive Coding Runner"
+# echo "========================================"
+# echo "Source: $SOURCE"
+# echo "Class:  $CLASS_NAME"
+# echo "Input:  $INPUT"
+# echo "Output: $OUTPUT"
+# echo
 
 # Remove old compiled classes.
 rm -rf "$BUILD_DIR"
@@ -71,15 +71,15 @@ mkdir -p "$BUILD_DIR"
 # Clear previous output.
 : > "$OUTPUT"
 
-echo "[1/2] Compiling..."
+# echo "[1/2] Compiling..."
 
 javac \
     -encoding UTF-8 \
     -d "$BUILD_DIR" \
     "$SOURCE"
 
-echo "[2/2] Running..."
-echo
+# echo "[2/2] Running..."
+# echo
 
 # Execute with input/output redirection.
 java \
@@ -88,7 +88,7 @@ java \
     < "$INPUT" \
     > "$OUTPUT"
 
-echo "========================================"
-echo "Execution completed."
-echo "Output written to op.txt"
-echo "========================================"
+# echo "========================================"
+# echo "Execution completed."
+# echo "Output written to op.txt"
+# echo "========================================"
